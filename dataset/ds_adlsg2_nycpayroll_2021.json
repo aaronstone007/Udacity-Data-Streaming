@@ -1,0 +1,102 @@
+{
+	"name": "ds_adlsg2_nycpayroll_2021",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adlsg2_udacity_santhosh",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "nycpayroll_2021.csv",
+				"folderPath": "dirpayrollfiles",
+				"fileSystem": "adlsnycpayroll-santhosh-k"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "FiscalYear",
+				"type": "String"
+			},
+			{
+				"name": "PayrollNumber",
+				"type": "String"
+			},
+			{
+				"name": "AgencyCode",
+				"type": "String"
+			},
+			{
+				"name": "AgencyName",
+				"type": "String"
+			},
+			{
+				"name": "EmployeeID",
+				"type": "String"
+			},
+			{
+				"name": "LastName",
+				"type": "String"
+			},
+			{
+				"name": "FirstName",
+				"type": "String"
+			},
+			{
+				"name": "AgencyStartDate",
+				"type": "String"
+			},
+			{
+				"name": "WorkLocationBorough",
+				"type": "String"
+			},
+			{
+				"name": "TitleCode",
+				"type": "String"
+			},
+			{
+				"name": "TitleDescription",
+				"type": "String"
+			},
+			{
+				"name": "LeaveStatusasofJune30",
+				"type": "String"
+			},
+			{
+				"name": "BaseSalary",
+				"type": "String"
+			},
+			{
+				"name": "PayBasis",
+				"type": "String"
+			},
+			{
+				"name": "RegularHours",
+				"type": "String"
+			},
+			{
+				"name": "RegularGrossPaid",
+				"type": "String"
+			},
+			{
+				"name": "OTHours",
+				"type": "String"
+			},
+			{
+				"name": "TotalOTPaid",
+				"type": "String"
+			},
+			{
+				"name": "TotalOtherPay",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,32 @@
+{
+	"name": "table_synapse_nycpayroll_summary",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_synapse_udacity_santhosh",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "FiscalYear",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "AgencyName",
+				"type": "varchar"
+			},
+			{
+				"name": "TotalPaid",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "NYC_Payroll_Summary"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

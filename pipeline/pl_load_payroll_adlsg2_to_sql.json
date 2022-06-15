@@ -1,0 +1,34 @@
+{
+	"name": "pl_load_payroll_adlsg2_to_sql",
+	"properties": {
+		"activities": [
+			{
+				"name": "load_payroll_adls_sql",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "1.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "df_payroll",
+						"type": "DataFlowReference"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2022-06-15T18:23:48Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

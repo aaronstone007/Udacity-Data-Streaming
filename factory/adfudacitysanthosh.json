@@ -1,0 +1,17 @@
+{
+	"name": "adfudacitysanthosh",
+	"properties": {
+		"globalParameters": {
+			"global_fiscal_year": {
+				"type": "int",
+				"value": 2020
+			}
+		}
+	},
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "27d2a861-1a29-4c66-a48e-52acd1eb694e",
+		"tenantId": "9b7cbd77-6d6b-4879-8aba-63d7dfb18472"
+	}
+}

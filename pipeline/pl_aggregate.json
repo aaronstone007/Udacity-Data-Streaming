@@ -1,0 +1,53 @@
+{
+	"name": "pl_aggregate",
+	"properties": {
+		"activities": [
+			{
+				"name": "Data flow1",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "1.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "Dataflow Aggregate Data",
+						"type": "DataFlowReference",
+						"parameters": {
+							"FiscalYear": {
+								"value": "@pipeline().globalParameters.global_fiscal_year",
+								"type": "Expression"
+							}
+						}
+					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "ls_adlsg2_udacity_santhosh",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "adlsnycpayroll-santhosh-k/dirstaging"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"parameters": {
+			"pl_param_fiscal_year": {
+				"type": "string",
+				"defaultValue": "2020"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-06-15T21:45:36Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

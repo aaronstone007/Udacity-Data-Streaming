@@ -1,0 +1,41 @@
+{
+	"name": "pl_sql_synapse",
+	"properties": {
+		"activities": [
+			{
+				"name": "sql_synapse",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "1.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "df_sql_synapse",
+						"type": "DataFlowReference"
+					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "ls_adlsg2_udacity_santhosh",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "adlsnycpayroll-santhosh-k/dirstaging"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2022-06-15T18:45:46Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

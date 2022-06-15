@@ -1,0 +1,30 @@
+{
+	"name": "ds_synapse_nyc_payroll_emp_md",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_synapse_udacity_santhosh",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "EmployeeID",
+				"type": "varchar"
+			},
+			{
+				"name": "LastName",
+				"type": "varchar"
+			},
+			{
+				"name": "FirstName",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "NYC_Payroll_EMP_MD"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

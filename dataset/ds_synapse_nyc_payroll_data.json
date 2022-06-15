@@ -1,0 +1,102 @@
+{
+	"name": "ds_synapse_nyc_payroll_data",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_synapse_udacity_santhosh",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "FiscalYear",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PayrollNumber",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "AgencyID",
+				"type": "varchar"
+			},
+			{
+				"name": "AgencyName",
+				"type": "varchar"
+			},
+			{
+				"name": "EmployeeID",
+				"type": "varchar"
+			},
+			{
+				"name": "LastName",
+				"type": "varchar"
+			},
+			{
+				"name": "FirstName",
+				"type": "varchar"
+			},
+			{
+				"name": "AgencyStartDate",
+				"type": "date"
+			},
+			{
+				"name": "WorkLocationBorough",
+				"type": "varchar"
+			},
+			{
+				"name": "TitleCode",
+				"type": "varchar"
+			},
+			{
+				"name": "TitleDescription",
+				"type": "varchar"
+			},
+			{
+				"name": "LeaveStatusasofJune30",
+				"type": "varchar"
+			},
+			{
+				"name": "BaseSalary",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PayBasis",
+				"type": "varchar"
+			},
+			{
+				"name": "RegularHours",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "RegularGrossPaid",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "OTHours",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "TotalOTPaid",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "TotalOtherPay",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "NYC_Payroll_Data"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
